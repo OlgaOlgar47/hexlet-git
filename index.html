@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Include the external JavaScript file -->
+    <!-- <script src="file.js"></script> -->
+    <script>
+// Object with data on how many times each number has appeared
+const lotteryNumbers = {
+  1: 47, 2: 49, 3: 41, 4: 32, 5: 46, 6: 39, 7: 50, 8: 41, 9: 57, 10: 55,
+  11: 46, 12: 40, 13: 48, 14: 43, 15: 46, 16: 51, 17: 51, 18: 58, 19: 35, 20: 45,
+  21: 45, 22: 35, 23: 41, 24: 40, 25: 42, 26: 37, 27: 52, 28: 40, 29: 37, 30: 44,
+  31: 41, 32: 41, 33: 49, 34: 49, 35: 57, 36: 39, 37: 46, 38: 46, 39: 50, 40: 43,
+  41: 46, 42: 43, 43: 62, 44: 53, 45: 45, 46: 40, 47: 53, 48: 54
+};
+
+// Converting the object into an array of key-value pairs [number, count]
+const numberEntries = Object.entries(lotteryNumbers);
+
+// Sorting the array based on the count in descending order
+numberEntries.sort((a, b) => b[1] - a[1]);
+
+// Selecting the top 5 numbers with the highest counts
+const topNumbers = numberEntries.slice(0, 5);
+vcbcbcgb
+// Printing the results
+console.log("Top 5 numbers with the highest probability of appearing in the next lottery:");
+topNumbers.forEach(([number, count]) => {
+  console.log(`${number}: ${count} times`);
+});
+    </script>
+</body>
+</html>
